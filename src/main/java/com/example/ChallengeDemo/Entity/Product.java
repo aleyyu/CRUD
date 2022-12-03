@@ -20,18 +20,17 @@ public class Product {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "category")
-    private String category;
+    //@ManyToOne()
+    //private Category category;
 
-    public Product(Long id, String name, int price, String description, String category) {
+    public Product() {
+    }
+
+    public Product(Long id, String name, int price, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.category = category;
-    }
-
-    public Product() {
     }
 
     public Long getId() {
@@ -66,11 +65,4 @@ public class Product {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }

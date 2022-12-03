@@ -1,5 +1,6 @@
 package com.example.ChallengeDemo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -39,4 +40,5 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
 }
