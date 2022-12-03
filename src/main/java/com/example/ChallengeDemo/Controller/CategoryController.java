@@ -16,7 +16,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @PostMapping("/save")
+    @PostMapping("/add")
     public ResponseEntity<Category> addCategory(@RequestBody Category category){
         Category addCategory = categoryService.addCategory(category);
         return new ResponseEntity<Category>(addCategory, HttpStatus.CREATED);
